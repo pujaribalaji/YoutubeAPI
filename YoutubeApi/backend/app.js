@@ -1,9 +1,10 @@
 const express = require('express');
 const app = express();
+require('dotenv').config();
 const cors = require('cors');
 const { google } = require('googleapis');
 const youtube = google.youtube('v3');
-const API_KEY = 'AIzaSyCuQ0EqNQneQTgley3k5GrkEuFYLOzPHzI';
+const API_KEY = process.env.APIKEY;
 const port = process.env.PORT || 5000;
 
 app.use(cors());
