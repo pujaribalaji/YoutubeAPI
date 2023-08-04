@@ -14,7 +14,7 @@ app.post('/api/keyword-search', async (req, res) => {
     const { keyword, month, year } = req.body;
 
     const startDate = new Date(year, month - 1, 1);
-    const endDate = new Date(year, month, 0);
+    const endDate = new Date(year, month,0 );
     const publishedAfter = startDate.toISOString();
     const publishedBefore = endDate.toISOString();
 
